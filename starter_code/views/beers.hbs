@@ -1,7 +1,10 @@
-<div class="container">
-  <div class="row">
-  {{#each beers}}
-   {{ beers }}
-  {{/each}}
+<div class="beers-container">
+  <h1>Beers</h1>
+   {{#each beers}} {{!--  it is a loop  --}}
+  <div>
+    {{!-- this = the current beer (object); this.name = current name --}}
+   <h3>{{this.name}}</h3>  {{!-- bears in an object --}}
+   <img src="{{this.image_url}}" alt=""">
   </div>
+   {{/each}}
 </div>
